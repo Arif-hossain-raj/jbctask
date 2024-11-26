@@ -1,0 +1,60 @@
+/* Navbar section  */
+
+.nav {
+    position: fixed;
+    top: 5%;
+    right: 40px;
+    z-index: 10;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 15px;
+}
+.nav ul li {
+    list-style: none;
+}
+
+/* hero */
+
+.hero {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-image {
+    position: relative;
+    padding-top: calc(1136 / 2560 * 100%);
+}
+
+.hero-image img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.2); 
+    z-index: 1; 
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.text h2{
+    margin-bottom: 1rem;
+}
