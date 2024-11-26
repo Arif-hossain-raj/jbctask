@@ -39,11 +39,11 @@
 }
 
 .hero-image::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.2); 
-    z-index: 1; 
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 1;
 }
 
 .text {
@@ -55,6 +55,26 @@
     color: white;
 }
 
-.text h2{
+.text h2 {
     margin-bottom: 1rem;
+    color: white;
+}
+
+/* vision */
+
+.vision {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.vision h2 {
+    color: #000;
+    margin: 40px 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.vision p {
+    color: black;
+    text-align: justify;
 }
