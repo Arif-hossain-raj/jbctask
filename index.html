@@ -5,6 +5,7 @@
   <title>JBC Task</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/global.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
@@ -20,7 +21,29 @@
         <li><a href="">People</a></li>
       </ul>
     </div>
+
   </section>
+
+
+  <!-- Mobile -->
+
+  <section>
+    <div class="mobile-nav">
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="#top">Top</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#message">Message</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#people">People</a></li>
+      </ul>
+    </div>
+  </section>
+
 
   <!-- Hero section -->
   <section>
@@ -121,35 +144,98 @@
 
   <!-- story and success -->
   <section class="story-success">
- 
-      <div class="story-success-content">
-        <div class="story-content-single">
-          <h3>STORY</h3>
-          <p>科学的研究というのが近代私学の学問的方法による研究という意義であるならば、これは史学の学徒の間に老いては一般に行われていることであるから、今更こと新しくいうには及ばないはずである。</p>
-        </div>
-        <div class="story-content-single">
-          <h3>SUCCESS</h3>
-          <p>
-            ちかごろ世間で日本歴史の科学的研究ということがしきりに叫ばれている。科学的研究というのが近代私学の学問的方法による研究という意義であるならば、これは史学の学徒の間に老いては一般に行われていることであるから、今更こと新しくいうには及ばないはずである。
-          </p>
-        </div>
+
+    <div class="story-success-content">
+      <div class="story-content-single">
+        <h3>STORY</h3>
+        <p>科学的研究というのが近代私学の学問的方法による研究という意義であるならば、これは史学の学徒の間に老いては一般に行われていることであるから、今更こと新しくいうには及ばないはずである。</p>
       </div>
-   
+      <div class="story-content-single">
+        <h3>SUCCESS</h3>
+        <p>
+          ちかごろ世間で日本歴史の科学的研究ということがしきりに叫ばれている。科学的研究というのが近代私学の学問的方法による研究という意義であるならば、これは史学の学徒の間に老いては一般に行われていることであるから、今更こと新しくいうには及ばないはずである。
+        </p>
+      </div>
+    </div>
+
   </section>
 
   <!-- map -->
-   <section class="map">
-    <div class="address">
-      <table>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-        </tr>
-      </table>
-    </div>
-    <div class="map"></div>
+  <section class="contact">
+    <div class="contact-wrapper">
+      <div class="address">
+        <table>
+          <tbody>
+            <tr>
+              <td class="left">社名</td>
+              <td>Sample Company</td>
+            </tr>
+            <tr>
+              <td class="left">代表取締役</td>
+              <td>見本 太郎</td>
+            </tr>
+            <tr>
+              <td class="left">住所</td>
+              <td>見本県見本市仮区見本町1-3-5</td>
+            </tr>
+            <tr>
+              <td class="left">電話番号</td>
+              <td>01234-567-8901</td>
+            </tr>
+            <tr>
+              <td class="left">設立</td>
+              <td>20XX年5月5日</td>
+            </tr>
+            <tr>
+              <td class="left">資本金</td>
+              <td>1,000,000円</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;" class="left">主な取引先</td>
+              <td>
+                <ul>
+                  <li>見本商事株式会社</li>
+                  <li>株式会社年中無休商事</li>
+                  <li>株式会社仮称</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-   </section>
+      </div>
+      <div class="map-container">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094317!2d144.9537353153168!3d-37.8172099797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5773e5b15102049!2sFederation%20Square!5e0!3m2!1sja!2sjp!4v1690652061528!5m2!1sja!2sjp&hl=ja"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- copywrite -->
+
+  <section class="copywrite">
+    <p>Copywrite(c) 2024 Sample Inc. All Rights Reserved. Design By http:/f-tbl.com</p>
+  </section>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("open");
+        hamburger.classList.toggle("active");
+      });
+    });
+
+  </script>
 
 
 </body>

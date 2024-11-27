@@ -21,6 +21,82 @@
     font-size: 14px;
 }
 
+
+/* mobile nav */
+
+
+.nav {
+    position: fixed;
+    top: 5%;
+    right: 40px;
+    z-index: 10;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 15px;
+  }
+  
+  .nav ul li {
+    list-style: none;
+  }
+  
+  .nav ul li a {
+    font-size: 14px;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav ul {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 200px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease-in-out;
+    }
+  
+    .nav ul.nav-menu.open {
+      right: 0;
+    }
+  
+    .nav ul li {
+      margin: 10px 0;
+    }
+  }
+  
+
 /* hero */
 
 .hero {
@@ -71,8 +147,6 @@
     margin: 0 auto;
     padding: 60px 0;
 }
-
-/* all h2 if the color and other property are same */
 
 .vision h2 {
     color: #1f0f22;
@@ -136,16 +210,15 @@
 }
 /* service-message-story */
 
-
 .round-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; 
-    width: 55%; 
+    flex-wrap: wrap;
+    width: 60%;
     margin: 0 auto;
     padding: 40px 0;
-    gap: 20px; 
+    gap: 15px;
 }
 
 .round-image-single {
@@ -167,9 +240,9 @@
 
 .round-image-img {
     position: relative;
-    padding-top: 100%; 
-  
-    margin: 0 auto; 
+    padding-top: 100%;
+
+    margin: 0 auto;
 }
 
 .round-image-img img {
@@ -178,25 +251,22 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%; 
+    border-radius: 50%;
 }
-
-
-
 
 /*  Story success */
 
 .story-success {
-    width: 100%; 
-    height: 300px; 
-    background-image: url('../images/bgSec04.jpg'); 
+    width: 100%;
+    height: 300px;
+    background-image: url("../images/bgSec04.jpg");
     background-position: center bottom;
-    background-size: cover; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-repeat: no-repeat;
     border: 2px solid #ccc;
-    display: flex; 
+    display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .story-success-content {
@@ -214,7 +284,7 @@
 }
 
 .story-content-single h3 {
-    color: #FAFBFC;
+    color: #fafbfc;
     margin: 30px 0;
     text-align: center;
     font-weight: 500;
@@ -226,5 +296,164 @@
     margin-top: 15px;
 }
 
+/* contact */
 
+.contact {
+    width: 60%;
+    margin: 0 auto;
 
+    padding: 100px 0;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.address,
+.map-container {
+    flex: 1 1 45%;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 14px 12px;
+    font-size: 14px;
+    line-height: 10px;
+}
+
+td ul li {
+    list-style: none;
+    color: blue;
+    padding-bottom: 10px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.left {
+    text-align: right;
+}
+
+.copywrite {
+    padding: 40px 0;
+}
+
+.copywrite p {
+    text-align: center;
+}
+
+/* mobile responsive */
+
+@media (max-width: 768px) {
+    .hero {
+        width: 100% !important;
+    }
+    .hero-image {
+        position: relative;
+        padding-top: 0;
+    }
+
+    .hero-image img {
+        position: unset;
+        height: 110vh;
+    }
+
+    .vision p {
+        color: #4c4c4b;
+        text-align: justify;
+        line-height: 24px !important;
+    }
+
+    /* Message */
+
+    .single {
+        flex-wrap: wrap;
+    }
+
+    .single-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-top: calc(700 / 1280 * 100%);
+        margin-bottom: 0 !important;
+    }
+
+    .single-image img {
+        object-fit: cover;
+    }
+    .single-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 15px 40px 15px;
+    }
+    .single-text p {
+        line-height: 24px;
+    }
+
+    /* rounded image  */
+
+    .round-image {
+        width: 100%;
+        padding: 40px 60px;
+        gap: 15px;
+    }
+    .round-image-single {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    /* story-success  */
+
+    .story-success-content {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .story-content-single {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    /* contact */
+
+    .contact {
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+
+  
+    .address,
+    .map-container {
+        flex: 1 1 100%;
+        box-sizing: border-box;
+        margin: auto;
+        height: 300px;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .left {
+        text-align: right;
+    }
+
+    .copywrite {
+        padding: 40px 0;
+    }
+
+    .copywrite p {
+        text-align: center;
+    }
+}
