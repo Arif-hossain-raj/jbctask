@@ -27,22 +27,34 @@
 
   <!-- Mobile -->
 
-  <section>
+  <section class="container">
     <div class="mobile-nav">
-      <button class="hamburger" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">
+        <img src="assets/images/hamburger.svg" alt="Hamburger Menu">
+      </button>
+      <button class="hamburger-close" aria-label="Toggle navigation" onclick="toggleMenu()">
+        <img src="assets/images/close.svg" alt="Close Menu">
       </button>
       <ul class="nav-menu">
-        <li><a href="#top">Top</a></li>
-        <li><a href="#vision">Vision</a></li>
-        <li><a href="#message">Message</a></li>
-        <li><a href="#service">Service</a></li>
-        <li><a href="#people">People</a></li>
+        <li>
+          <img  src="assets/images/arrow.svg" alt="">
+          <a href="#top">Top</a></li>
+        <li>
+          <img src="assets/images/arrow.svg" alt="">
+          <a href="#vision">Vision</a></li>
+        <li>
+          <img src="assets/images/arrow.svg" alt="">
+          <a href="#message">Message</a></li>
+        <li>
+          <img src="assets/images/arrow.svg" alt="">
+          <a href="#service">Service</a></li>
+        <li>
+          <img src="assets/images/arrow.svg" alt="">
+          <a href="#people">People</a></li>
       </ul>
     </div>
   </section>
+  
 
 
   <!-- Hero section -->
@@ -225,15 +237,13 @@
 
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-menu");
+    function toggleMenu() {
+      const menu = document.querySelector('.nav-menu');
+      menu.classList.toggle('active');
+      const mobileNav = document.querySelector('.mobile-nav');
+      mobileNav.classList.toggle('active');
+    }
 
-      hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("open");
-        hamburger.classList.toggle("active");
-      });
-    });
 
   </script>
 
